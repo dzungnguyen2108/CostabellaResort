@@ -1,17 +1,48 @@
+# Medallion Architecture for Revenue Management Analytics Project
+
+## Overview
+This README provides a comprehensive documentation of the Medallion Architecture utilized in the Revenue Management Analytics Project. The goal is to manage and analyze revenue data efficiently using a layered architecture.
+
+## Data Flow
+The data flow in this project follows the Medallion Architecture, which is divided into three layers:
+
+1. **Bronze Layer**: This is the raw data layer where all incoming data is stored in its original format. It typically involves data ingestion from various sources.
+2. **Silver Layer**: The clean and enriched data layer, where data is processed, validated, and enriched to produce higher quality datasets. Here, transformations like filtering, deduplication, and aggregations occur.
+3. **Gold Layer**: This layer is designed for analytics-ready data. The data is aggregated and optimized for reporting and business intelligence tools such as Power BI.
+
+## Layers Explained
+### Bronze Layer
+- Raw data ingestion from various sources (e.g., CSVs, databases, APIs).
+- Storage solutions such as data lakes or raw databases.
+
+### Silver Layer
+- Data cleansing and transformation processes.
+- Includes code and logic to ensure data integrity and enhance quality.
+- Use tools like Apache Spark or similar for transformation tasks.
+
+### Gold Layer
+- Aggregated datasets tailored for analytics and reporting.
+- Data optimized for tools like Power BI to generate interactive dashboards and reports.
+- Key performance indicators (KPIs) and metrics defined for analysis.
+
+## Power BI Integration
+- This project integrates with Power BI to provide visual insights into the revenue management analytics.
+- Data in the Gold layer is structured for seamless connection with Power BI, allowing for real-time data visualization.
+- Follow Power BI documentation for connecting to data sources, refresh schedules, and dashboard creation.
+
+## Project Structure
+```plaintext
 CostabellaResort/
-├── README.md
-├── data/
-│   ├── sample_booking_data.csv
-│   ├── room_rates.csv
-│   └── occupancy_data.csv
-├── analysis/
-│   ├── data_preparation.py
-│   ├── revenue_calculations.py
-│   └── metrics_generation.py
-├── powerbi/
-│   ├── CostabellaResort_Dashboard.pbix
-│   └── DASHBOARD_README.md
-├── docs/
-│   ├── DATA_DICTIONARY.md
-│   └── ANALYSIS_METHODOLOGY.md
-└── requirements.txt
+│
+├── bronze/
+│   └── [raw data files]  
+│
+├── silver/
+│   ├── [data cleansing scripts]  
+│   └── [transformation scripts]  
+│
+├── gold/
+│   ├── [aggregated data files]  
+│   └── [analytics reports]  
+│
+└── README.md
