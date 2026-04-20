@@ -1,0 +1,17 @@
+CostabellaResort/
+├── README.md
+├── data/
+│   ├── sample_booking_data.csv
+│   ├── room_rates.csv
+│   └── occupancy_data.csv
+├── analysis/
+│   ├── data_preparation.py
+│   ├── revenue_calculations.py
+│   └── metrics_generation.py
+├── powerbi/
+│   ├── CostabellaResort_Dashboard.pbix
+│   └── DASHBOARD_README.md
+├── docs/
+│   ├── DATA_DICTIONARY.md
+│   └── ANALYSIS_METHODOLOGY.md
+└── requirements.txt
